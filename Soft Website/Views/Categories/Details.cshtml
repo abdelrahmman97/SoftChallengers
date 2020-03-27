@@ -1,0 +1,60 @@
+﻿@model Soft_Website.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewBag.DashboardMsg = "Categories";
+}
+
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4 col-lg-12">
+    <h1 class="h5 mb-0 text-gray-800">Detials</h1>
+    <div>
+        <a href="@Url.Action("Index","Categories")" class="btn btn-secondary btn-icon-split">
+            <span class="icon text-white-50">
+                <i class="fas fa-arrow-left"></i>
+            </span>
+            <span class="text">Back To List</span>
+        </a>
+    </div>
+</div>
+
+<!-- Basic Card Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary d-inline-block">Details</h6>
+        <div class="float-right">
+            <a href="@Url.Action("Edit", "Categories", new { id = Model.Id })" class="btn btn-primary btn-circle btn-sm">
+                <i class="fas fa-edit"></i>
+            </a>
+            <a href="@Url.Action("Delete", "Categories", new { id = Model.Id })" class="btn btn-danger btn-circle btn-sm">
+                <i class="fas fa-trash"></i>
+            </a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-lg-2">
+                    <h5 class="font-weight-bold">@Html.DisplayNameFor(model => model.Id)</h5>
+                </div>
+                <div class="col-lg-10">
+                    <h5>@Html.DisplayFor(model => model.Id)</h5>
+                </div>
+                <hr />
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2">
+                    <h5 class="font-weight-bold">@Html.DisplayNameFor(model => model.CategoryName)</h5>
+                </div>
+                <div class="col-lg-10">
+                    <h5>@Html.DisplayFor(model => model.CategoryName)</h5>
+                </div>
+                <hr />
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Soft_Website.Models.Team>
+
+@{
+    ViewBag.Title = "Team";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewBag.DashboardMsg = "Team";
+}
+
+
+<link rel="stylesheet" href="~/Css/DashboardVendor/datatables/dataTables.bootstrap4.min.css">
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4 col-lg-12">
+    <h1 class="h3 mb-0 text-gray-800">Index</h1>
+    <a href="@Url.Action("Create","Teams")" class="btn btn-primary btn-icon-split">
+        <span class="icon text-white-50">
+            <i class="fas fa-plus"></i>
+        </span>
+        <span class="text">Create New</span>
+    </a>
+</div>
+
+<!-- DataTales -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Team Members</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.image)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Job_title)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.image)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Job_title)
+                        </th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.name)
+                            </td>
+                            <td>
+                                <div class="preview-img-team">
+                                    <img src="~/imgs/teame/@Html.DisplayFor(modelItem => item.image)" />
+                                </div>
+                                @Html.DisplayFor(modelItem => item.image)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Job_title)
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Edit", "Teams", new { id = item.Id })" class="btn btn-primary btn-circle btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="@Url.Action("Details", "Teams", new { id = item.Id })" class="btn btn-info btn-circle btn-sm">
+                                    <i class="fas fa-info"></i>
+                                </a>
+                                <a href="@Url.Action("Delete", "Teams", new { id = item.Id })" class="btn btn-danger btn-circle btn-sm">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

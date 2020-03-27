@@ -1,0 +1,181 @@
+﻿@model Soft_Website.Models.Work
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_IntroHeaderLayout_1.cshtml";
+    ViewBag.Message = "View Previous Experiences";
+}
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+<br>
+<br>
+<br>
+
+<div class="vew_pro">
+    <div class="img_slider">
+        <img src="~/Uploads/@Html.DisplayFor(model => model.image)">
+        <img src="~/Uploads/@Html.DisplayFor(model => model.image)">
+        <img src="~/Uploads/@Html.DisplayFor(model => model.image)">
+        <img src="~/Uploads/@Html.DisplayFor(model => model.image)">
+        <img src="~/Uploads/@Html.DisplayFor(model => model.image)">
+    </div>
+
+    <div class="descrption_pro">
+        <ul>
+            <li>
+                Project Name:
+                <span>@Html.DisplayFor(model => model.title)</span>
+            </li>
+            <li>
+                Project Details :
+                <p>@Html.DisplayFor(model => model.details)</p>
+            </li>
+            <li>
+                Technologies & Libraries :
+                <div class="tech">
+                    @{
+                        string data = Html.DisplayFor(model => model.technologies).ToString();
+
+                        // Part 2: split string on spaces (this will separate all the words).
+                        string[] words = data.Split(' ');
+
+                        // Part 3: loop over result array.
+                        foreach (string word in words)
+                        {
+                            switch (word)
+                            {
+                                case "html":
+                                case "Html":
+                                    <div class="tech_feat">
+                                        <i class="fab fa-html5">
+                                            <br>
+                                            <span>Html</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                case "css":
+                                case "Css":
+                                    <div class="tech_feat">
+                                        <i class="fab fa-css3-alt">
+                                            <br>
+                                            <span>Css3</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                case "python":
+                                case "Python":
+                                    <div class="tech_feat">
+                                        <i class="fab fa-python">
+                                            <br>
+                                            <span>python</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                case "php":
+                                case "Php":
+                                    <div class="tech_feat">
+                                        <i class="fab fa-php">
+                                            <br>
+                                            <span>php</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                case "angular":
+                                case "Angular":
+                                    <div class="tech_feat">
+                                        <i class="fab fa-angular">
+                                            <br>
+                                            <span>angular</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                case "bootstrap":
+                                case "Bootstrap":
+                                    <div class="tech_feat">
+                                        <i class="fab fa-bootstrap">
+                                            <br>
+                                            <span>bootstrap</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                case "jquery":
+                                case "Jquery":
+                                    <div class="tech_feat">
+                                        <i class="fab fa-js">
+                                            <br>
+                                            <span>Jquery</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                case "js":
+                                case "Js":
+                                case "JS":
+                                    <div class="tech_feat">
+                                        <i class="fab fa-js">
+                                            <br>
+                                            <span>JS</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                case "c#":
+                                    <div class="tech_feat">
+                                        <i class="devicon-csharp-plain">
+                                            <br>
+                                            <span>c#</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                case "asp.net":
+                                    <div class="tech_feat">
+                                        <i class="devicon-dot-net-plain">
+                                            <br>
+                                            <span>asp.net</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                case "android":
+                                    <div class="tech_feat">
+                                        <i class="devicon-android-plain">
+                                            <br>
+                                            <span>android</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                case "ios":
+                                    <div class="tech_feat">
+                                        <i class="fab fa-apple">
+                                            <br>
+                                            <span>ios</span>
+                                        </i>
+                                    </div>
+                                    break;
+                                default:
+                                    <div class="tech_feat">
+                                        <i class="fa fa-code">
+                                            <br>
+                                            <span>@word</span>
+                                        </i>
+                                    </div>
+                                    break;
+                            }
+                        }
+                    }
+                </div>
+            </li>
+            <li>
+                Features :
+
+                <ul>
+                    <li><p>@Html.DisplayFor(model => model.features)</p></li>
+                </ul>
+            </li>
+            <li>
+                Project URL: <a href="@Html.DisplayFor(model => model.projectUrl)" target="_blank">@Html.DisplayFor(model => model.projectUrl)</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<br>
+<br>
+<br>

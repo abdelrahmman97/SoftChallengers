@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using WebApplication1.Models;
+using System.Web.Security;
 
 namespace WebApplication1.Controllers
 {
@@ -417,8 +418,11 @@ namespace WebApplication1.Controllers
         [Route("Account/LogOff")]
         public ActionResult LogOff()
         {
-            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+            // AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+
+            Session.Clear();
+            //FormsAuthentication.SignOut();
+            return RedirectToAction("Login", "Account");
         }
 
         //

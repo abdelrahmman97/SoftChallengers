@@ -42,7 +42,7 @@ namespace WebApplication1.Controllers
         {
 
             var mail = new MailMessage();
-            var loginInfo = new NetworkCredential("mohosny14@gmail.com", "mo..hamedAli14");
+            var loginInfo = new NetworkCredential("softchallengers14@gmail.com", "mo..hamedAli14");
             mail.From = new MailAddress(contact.E_mail);
             mail.To.Add(new MailAddress("mohosny14@gmail.com"));
 
@@ -55,7 +55,7 @@ namespace WebApplication1.Controllers
             mail.Body = body;
 
             var smtpClient = new SmtpClient("smtp.gmail.com", 587); // 587 this is Gmail Port
-
+            
             smtpClient.EnableSsl = true;
 
             smtpClient.Credentials = loginInfo;

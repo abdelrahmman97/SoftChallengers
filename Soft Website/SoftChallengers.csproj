@@ -217,8 +217,11 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="imgs\contact1.png" />
+    <Content Include="imgs\cost.jpg" />
     <Content Include="imgs\cover1.jpg" />
     <Content Include="imgs\coverHome.jpg" />
+    <Content Include="imgs\creative.png" />
+    <Content Include="imgs\expr.jpg" />
     <Content Include="imgs\header.gif" />
     <Content Include="imgs\headergif.gif" />
     <Content Include="imgs\headery.gif" />
@@ -231,6 +234,10 @@
     <Content Include="imgs\mob.jpg" />
     <Content Include="imgs\mob2.jfif" />
     <Content Include="imgs\multi.jpg" />
+    <Content Include="imgs\quality.jpg" />
+    <Content Include="imgs\service.png" />
+    <Content Include="imgs\support.png" />
+    <Content Include="imgs\team.jpeg" />
     <Content Include="imgs\teame\abdstar.jfif" />
     <Content Include="imgs\teame\hassaan.jpg" />
     <Content Include="imgs\teame\mHosni.jfif" />
@@ -241,6 +248,8 @@
     <Content Include="imgs\teame\sheikh2.jfif" />
     <Content Include="imgs\teame\sheref.jfif" />
     <Content Include="imgs\teamwork_white_1_dribbble-01-01.png" />
+    <Content Include="imgs\time.jpeg" />
+    <Content Include="imgs\web.jpg" />
     <Content Include="imgs\whedaer-bg.png" />
     <Content Include="imgs\Yellow-Pine-Stair-Treads.jpg" />
     <Content Include="js\bootstrap.js" />
@@ -293,6 +302,10 @@
     <Compile Include="Migrations\202003270040280_addCategoryID.cs" />
     <Compile Include="Migrations\202003270040280_addCategoryID.Designer.cs">
       <DependentUpon>202003270040280_addCategoryID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003271835458_addmore.cs" />
+    <Compile Include="Migrations\202003271835458_addmore.Designer.cs">
+      <DependentUpon>202003271835458_addmore.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -499,6 +512,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003270040280_addCategoryID.resx">
       <DependentUpon>202003270040280_addCategoryID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003271835458_addmore.resx">
+      <DependentUpon>202003271835458_addmore.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

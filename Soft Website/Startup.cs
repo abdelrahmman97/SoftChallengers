@@ -28,24 +28,28 @@ namespace WebApplication1
             var roleUser = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
 
             IdentityRole role = new IdentityRole(); // this object to create the role
-            if (!roleManger.RoleExists("Admins")) 
-            {
-                // create role
-                role.Name = "Admins";
-                roleManger.Create(role);
-
-                // create User
-                ApplicationUser user1 = new ApplicationUser();
-                user1.UserName = "Mohamed";
-                user1.Email = "mohosny14@gmail.com";
-                // user1.PasswordHash = "sdl";
-                var check = roleUser.Create(user1, "mo..hamedAli14");
-
-                if (check.Succeeded)
+            
+                if (!roleManger.RoleExists("Admins"))
                 {
-                    roleUser.AddToRole(user1.Id, "Admins");
+                    // create role
+                    role.Name = "Admins";
+                    roleManger.Create(role);
+
+                    // create User
+                    ApplicationUser user1 = new ApplicationUser();
+                    user1.UserName = "Mohamed";
+                    user1.Email = "mohosny14@gmail.com";
+                    // user1.PasswordHash = "sdl";
+                    var check = roleUser.Create(user1, "mo..hamedAli14");
+
+                    if (check.Succeeded)
+                    {
+                        roleUser.AddToRole(user1.Id, "Admins");
+                    }
                 }
-            }
+            
+
+           
         }
     }
 }

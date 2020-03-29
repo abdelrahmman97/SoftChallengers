@@ -208,6 +208,7 @@
     <Content Include="Css\DashboardVendor\jquery\jquery.min.js" />
     <Content Include="Css\DashboardVendor\jquery\jquery.slim.js" />
     <Content Include="Css\DashboardVendor\jquery\jquery.slim.min.js" />
+    <Content Include="Css\devicon.min.css" />
     <Content Include="Css\font-awesome.css" />
     <Content Include="Css\fontawesome.css" />
     <Content Include="Css\normalize.css" />
@@ -230,12 +231,28 @@
     <Content Include="imgs\hom.png" />
     <Content Include="imgs\i1.png" />
     <Content Include="imgs\iconfinder_computer_1055084.png" />
+    <Content Include="imgs\illustrations\undraw_bear_market_ania.svg" />
+    <Content Include="imgs\illustrations\undraw_contact_us_15o2.svg" />
+    <Content Include="imgs\illustrations\undraw_creativity_wqmm.svg" />
+    <Content Include="imgs\illustrations\undraw_discount_d4bd.svg" />
+    <Content Include="imgs\illustrations\undraw_done_a34v.svg" />
+    <Content Include="imgs\illustrations\undraw_experts3_3njd.svg" />
+    <Content Include="imgs\illustrations\undraw_in_no_time_6igu.svg" />
+    <Content Include="imgs\illustrations\undraw_mobile_development_8gyo.svg" />
+    <Content Include="imgs\illustrations\undraw_progressive_app_m9ms.svg" />
+    <Content Include="imgs\illustrations\undraw_responsive_6c8s.svg" />
+    <Content Include="imgs\illustrations\undraw_team_spirit_hrr4.svg" />
+    <Content Include="imgs\illustrations\undraw_web_developer_p3e5.svg" />
     <Content Include="imgs\imgHead.png" />
     <Content Include="imgs\mob.jpg" />
     <Content Include="imgs\mob2.jfif" />
     <Content Include="imgs\multi.jpg" />
     <Content Include="imgs\quality.jpg" />
     <Content Include="imgs\service.png" />
+    <Content Include="imgs\SoftChallengers-removebg-1.ico" />
+    <Content Include="imgs\SoftChallengers-removebg-1.png" />
+    <Content Include="imgs\SoftChallengers.ico" />
+    <Content Include="imgs\SoftChallengers.jpeg" />
     <Content Include="imgs\support.png" />
     <Content Include="imgs\team.jpeg" />
     <Content Include="imgs\teame\abdstar.jfif" />
@@ -486,6 +503,10 @@
     <Content Include="Css\DashboardVendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="Views\Home\Portfolio.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="fonts\devicon.eot" />
+    <Content Include="fonts\devicon.ttf" />
+    <Content Include="fonts\devicon.woff" />
+    <Content Include="Views\Home\RedirectPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

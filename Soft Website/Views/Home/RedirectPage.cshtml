@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "RedirectPage";
+}
+
+<script>
+    alert("@ViewBag.msg");
+    window.location.href = "@Url.Action("Contact","Home")";
+</script>

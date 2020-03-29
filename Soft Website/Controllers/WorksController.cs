@@ -12,6 +12,7 @@ using WebApplication1.Models;
 
 namespace Soft_Website.Controllers
 {
+    [Authorize(Roles = "Admins")]
     public class WorksController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -49,7 +50,7 @@ namespace Soft_Website.Controllers
         }
 
         // POST: Works/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -88,7 +89,7 @@ namespace Soft_Website.Controllers
         }
 
         // POST: Works/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]

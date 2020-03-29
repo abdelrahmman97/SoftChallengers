@@ -12,11 +12,13 @@ using WebApplication1.Models;
 
 namespace Soft_Website.Controllers
 {
+    [Authorize(Roles = "Admins")]
     public class TeamsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Teams
+        [Authorize(Roles = "Admins")]
         [Route("Teams/Index")]
         public ActionResult Index()
         {
@@ -24,6 +26,7 @@ namespace Soft_Website.Controllers
         }
 
         // GET: Teams/Details/5
+        [Authorize(Roles = "Admins")]
         [Route("Teams/Details/{id}")]
         public ActionResult Details(int? id)
         {
@@ -48,7 +51,7 @@ namespace Soft_Website.Controllers
         }
 
         // POST: Teams/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -84,7 +87,7 @@ namespace Soft_Website.Controllers
         }
 
         // POST: Teams/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]

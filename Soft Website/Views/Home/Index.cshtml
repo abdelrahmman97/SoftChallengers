@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Soft_Website.Models.Work>
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -8,7 +9,7 @@
             <div class="intro">
                 <div class="introLeft">
                     <h2>We Grow Together</h2>
-                    <p>We are glad to work for you delivering and supporting your software evolving with the ultimate stability and best quality.</p>
+                    <p>We are happy to work for you and delivering and supporting your software with best quality and Price suitable.</p>
                     <button onclick="window.location.href = 'Contact';">Start Work</button>
                 </div>
                 <div class="introRight">
@@ -21,33 +22,27 @@
 <div class="home_features1">
     <div class="container">
         <h2>Soft Challengers services</h2>
-
-        <div class="home_features1_feats">
-            <img src="~/imgs/iconfinder_computer_1055084.png">
-            <div class="home_features1_feats_under_img">
-                <h3>Smartphone Programming</h3>
-                <p>Developing Mobile Apps was never this easy ,more affordable and with best efficiency.</p>
+        <div class="text-center">
+            <div class="home_features1_feats">
+                <img src="~/imgs/illustrations/undraw_mobile_development_8gyo.svg">
+                <div class="home_features1_feats_under_img">
+                    <h3>Smartphone Programming</h3>
+                    <p>Developing Mobile Apps was never this easy ,more affordable and with best efficiency.</p>
+                </div>
             </div>
-        </div>
-        <div class="home_features1_feats">
-            <img src="~/imgs/iconfinder_computer_1055084.png">
-            <div class="home_features1_feats_under_img">
-                <h3>Programming Desktop</h3>
-                <p>Cause whatever technology or how much we evolve Desktop Apps are still the base and we are glad to provide and develop it with optimum quality.</p>
+            <div class="home_features1_feats">
+                <img src="~/imgs/illustrations/undraw_responsive_6c8s.svg">
+                <div class="home_features1_feats_under_img">
+                    <h3>Programming Desktop</h3>
+                    <p>Cause whatever technology or how much we evolve Desktop Apps are still the base and we are glad to provide and develop it with optimum quality.</p>
+                </div>
             </div>
-        </div>
-        <div class="home_features1_feats">
-            <img src="~/imgs/web.jpg">
-            <div class="home_features1_feats_under_img">
-                <h3>Website Design & Development</h3>
-                <p>As Mobility and reachability are the keys to wide-spreading and evolving with time through the feedback of all and enhancing at every step.</p>
-            </div>
-        </div>
-        <div class="home_features1_feats">
-            <img src="~/imgs/iconfinder_computer_1055084.png">
-            <div class="home_features1_feats_under_img">
-                <h3>Hardware Design</h3>
-                <p>Cause Hardware are the base of everything around we are glad to offer our solutions working and executing with the best case.</p>
+            <div class="home_features1_feats">
+                <img src="~/imgs/illustrations/undraw_web_developer_p3e5.svg">
+                <div class="home_features1_feats_under_img">
+                    <h3>Website Design & Development</h3>
+                    <p>As Mobility and reachability are the keys to wide-spreading and evolving with time through the feedback of all and enhancing at every step.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -59,7 +54,7 @@
         <div class="container">
             <div class="overlay_left">
                 <h1>Who we are</h1>
-                <ul>
+                <ul style="list-style: none;">
                     <li>Soft Challengers has a leading development team that seeks to provide the best solutions with the most optimum quality at a great affordable price.</li>
                 </ul>
             </div>
@@ -70,38 +65,33 @@
 <div class="previous_experience">
     <div class="container">
         <div class="previous_left">
+
             <div class="previous_left_l">
-                <div class="previous_left_feat">
-                    <img src="~/imgs/mob2.jfif">
-                    <div class="left_feat_bottom">Icenna</div>
-                    <div class="left_feat_cover">
-                        <p>It's a learning tool for those who don't quite understand three-dimensionality.</p>
+                @foreach (var item in Model.Take(2))
+                {
+                    <div class="previous_left_feat">
+                        <img src="~/Uploads/@Html.DisplayFor(modelItem => item.image)">
+                        <div class="left_feat_bottom">@Html.DisplayFor(modelItem => item.title)</div>
+                        <div class="left_feat_cover">
+                            <p>@Html.DisplayFor(modelItem => item.details)</p>
+                        </div>
                     </div>
-                </div>
-                <div class="previous_left_feat">
-                    <img src="~/imgs/mob2.jfif">
-                    <div class="left_feat_bottom">Icenna</div>
-                    <div class="left_feat_cover">
-                        <p>Clini booking system .. it has Integration with Paypal, Nexmo, google maps APIs</p>
-                    </div>
-                </div>
+                }
             </div>
+
             <div class="previous_left_r">
-                <div class="previous_left_feat">
-                    <img src="~/imgs/mob2.jfif">
-                    <div class="left_feat_bottom">Icenna</div>
-                    <div class="left_feat_cover">
-                        <p>Facilitate the communication between teachers and parents</p>
+                @foreach (var item in Model.Skip(2))
+                {
+                    <div class="previous_left_feat">
+                        <img src="~/Uploads/@Html.DisplayFor(modelItem => item.image)">
+                        <div class="left_feat_bottom">@Html.DisplayFor(modelItem => item.title)</div>
+                        <div class="left_feat_cover">
+                            <p>@Html.DisplayFor(modelItem => item.details)</p>
+                        </div>
                     </div>
-                </div>
-                <div class="previous_left_feat">
-                    <img src="~/imgs/mob2.jfif">
-                    <div class="left_feat_bottom">Icenna</div>
-                    <div class="left_feat_cover">
-                        <p>Math game device .. the software connect to the device with socket programming</p>
-                    </div>
-                </div>
+                }
             </div>
+
         </div>
 
         <div class="previous_right">
@@ -125,35 +115,35 @@
 <div class="why_us">
     <div class="container">
         <div class="why_us_feat">
-            <img src="~/imgs/cost.jpg">
+            <img src="~/imgs/illustrations/undraw_discount_d4bd.svg">
             <h4>Best Price</h4>
         </div>
         <div class="why_us_feat">
-            <img src="~/imgs/creative.png">
+            <img src="~/imgs/illustrations/undraw_creativity_wqmm.svg">
             <h4>Creative</h4>
         </div>
         <div class="why_us_feat">
-            <img src="~/imgs/expr.jpg">
+            <img src="~/imgs/illustrations/undraw_experts3_3njd.svg">
             <h4>Experience</h4>
         </div>
         <div class="why_us_feat">
-            <img src="~/imgs/time.jpeg">
+            <img src="~/imgs/illustrations/undraw_in_no_time_6igu.svg">
             <h4>On Time</h4>
         </div>
         <div class="why_us_feat">
-            <img src="~/imgs/quality.jpg">
+            <img src="~/imgs/illustrations/undraw_bear_market_ania.svg">
             <h4>High Quality</h4>
         </div>
         <div class="why_us_feat">
-            <img src="~/imgs/support.png">
+            <img src="~/imgs/illustrations/undraw_contact_us_15o2.svg">
             <h4>Always Support</h4>
         </div>
         <div class="why_us_feat">
-            <img src="~/imgs/team.jpeg">
+            <img src="~/imgs/illustrations/undraw_team_spirit_hrr4.svg">
             <h4>Team Work</h4>
         </div>
         <div class="why_us_feat">
-            <img src="~/imgs/service.png">
+            <img src="~/imgs/illustrations/undraw_progressive_app_m9ms.svg">
             <h4>Variety Service</h4>
         </div>
     </div>

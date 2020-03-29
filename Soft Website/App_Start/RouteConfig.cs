@@ -60,6 +60,12 @@ namespace WebApplication1
                 defaults: new { controller = "Account", action = "Index", id = UrlParameter.Optional }
             );
 
+            routes.MapRoute(
+                name: "AccountLogOff",
+                url: "{id}",
+                defaults: new { controller = "Account", action = "LogOff", id = UrlParameter.Optional }
+            );
+
             // Categories Index View
             routes.MapRoute(
                 name: "CategoriesIndex",

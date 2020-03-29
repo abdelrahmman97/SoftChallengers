@@ -18,15 +18,14 @@ namespace WebApplication1.Controllers
         [Route("")]
         public ActionResult Index()
         {
-            return View();
+            var qry = db.Works.ToList().Take(4);
+            return View(qry);
         }
 
         [Route("About")]
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return View(db.Teams.ToList());
         }
 
         [HttpGet]
@@ -55,17 +54,13 @@ namespace WebApplication1.Controllers
             mail.Body = body;
 
             var smtpClient = new SmtpClient("smtp.gmail.com", 587); // 587 this is Gmail Port
-            
+
             smtpClient.EnableSsl = true;
 
             smtpClient.Credentials = loginInfo;
             smtpClient.Send(mail);
-            if (contact.message != null)
-            {
-                ViewBag.msg = "Your Message Sent Successfully!";
-            }
-
-            return RedirectToAction("Index");
+            TempData["shortMessage"] = "Your Message Sent Successfully!, and we will communicate with you soon.";
+            return RedirectToAction("RedirectPage");
         }
 
         [Route("Portfolio")]
@@ -88,6 +83,12 @@ namespace WebApplication1.Controllers
                 return HttpNotFound();
             }
             return View(work);
+        }
+
+        public ActionResult RedirectPage()
+        {
+            ViewBag.msg = TempData["shortMessage"].ToString();
+            return View();
         }
     }
 }

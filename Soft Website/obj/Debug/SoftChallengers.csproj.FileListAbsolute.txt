@@ -137,3 +137,5 @@ D:\My-GitHub\SoftChallengers\Soft Website\obj\Debug\SoftChallengers.csproj.Gener
 D:\My-GitHub\SoftChallengers\Soft Website\obj\Debug\Soft Website.dll
 D:\My-GitHub\SoftChallengers\Soft Website\obj\Debug\Soft Website.pdb
 D:\My-GitHub\SoftChallengers\Soft Website\obj\Debug\Soft_Website.Migrations.addmore.resources
+E:\C Projects\My-Github\SoftChallengers\Soft Website\obj\Debug\Soft_Website.Migrations.addmore.resources
+E:\C Projects\My-Github\SoftChallengers\Soft Website\obj\Debug\SoftChallengers.csprojAssemblyReference.cache

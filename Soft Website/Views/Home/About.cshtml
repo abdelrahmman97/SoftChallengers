@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "About";
     Layout = "~/Views/Shared/_IntroHeaderLayout_1.cshtml";
-    ViewBag.Message = "Company Profile With Excel Codes";
+    ViewBag.Message = "Learn More About Us";
 }
 
 <div class="about">
@@ -29,35 +29,16 @@
 <div class="ourTeam">
     <div class="container">
         <div class="ourTeam_slidr">
-            <div class="slidr_feat">
-                <img src="imgs/teame/hassaan.jpg">
-                <div class="name">Hassaan Nabil <br> Front End Developer</div>
-            </div>
-            <div class="slidr_feat">
-                <img src="imgs/teame/osama.jfif">
-                <div class="name">Osama Mohamed <br> Front End Developer</div>
-            </div>
-            <div class="slidr_feat">
-                <img src="imgs/teame/najeh2.jfif">
-                <div class="name">Mohamed Najeh <br> Front End Developer</div>
-            </div>
-            <div class="slidr_feat">
-                <img src="imgs/teame/sheikh2.jfif">
-                <div class="name">Ahmed Elsheikh <br> Front End Developer</div>
-            </div>
-            <div class="slidr_feat">
-                <img src="imgs/teame/sheref.jfif">
-                <div class="name">Sheref Mohamed <br> Front End Developer</div>
-            </div>
-            <div class="slidr_feat">
-                <img src="imgs/teame/mHosni.jfif">
-                <div class="name">Mohamed Hosni<br> Front End Developer</div>
-            </div>
-            <div class="slidr_feat">
-                <img src="imgs/teame/abdstar.jfif">
-                <div class="name">Abd Elsatar Ahmed<br> Front End Developer</div>
-            </div>
-            <div class="slidr_feat"></div>
+            @foreach (var item in Model)
+            {
+                <div class="slidr_feat">
+                    <img src="~/imgs/teame/@Html.DisplayFor(modelItem => item.image)" />
+                    <div class="name">@Html.DisplayFor(modelItem => item.name) <br> @Html.DisplayFor(modelItem => item.Job_title)</div>
+                </div>
+            }
+            @*
+
+                <div class="slidr_feat"></div>*@
         </div>
     </div>
 </div>

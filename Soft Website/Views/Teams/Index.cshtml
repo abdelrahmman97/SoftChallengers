@@ -6,6 +6,11 @@
     ViewBag.DashboardMsg = "Team";
 }
 
+<style>
+    .preview-img-index img {
+        width: 100px;
+    }
+</style>
 
 <link rel="stylesheet" href="~/Css/DashboardVendor/datatables/dataTables.bootstrap4.min.css">
 
@@ -65,7 +70,7 @@
                                 @Html.DisplayFor(modelItem => item.name)
                             </td>
                             <td>
-                                <div class="preview-img-team">
+                                <div class="preview-img-index">
                                     <img src="~/imgs/teame/@Html.DisplayFor(modelItem => item.image)" />
                                 </div>
                                 @Html.DisplayFor(modelItem => item.image)

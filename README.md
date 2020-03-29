@@ -11,11 +11,11 @@
 	 
 ## Features
 - ### Main Pages
-- Home Page (`https://github.com/abdelelrahman97/SoftChallengers/blob/master/Soft%20Website/Views/Home/Index.cshtml`)
-- Portfolio Page (`https://github.com/abdelelrahman97/SoftChallengers/blob/master/Soft%20Website/Views/Home/Portfolio.cshtml`)
-- Contact Page (`https://github.com/abdelelrahman97/SoftChallengers/blob/master/Soft%20Website/Views/Home/Contact.cshtml`)
-- About Page (`https://github.com/abdelelrahman97/SoftChallengers/blob/master/Soft%20Website/Views/Home/About.cshtml`)
-- Portfolio Page (`https://github.com/abdelelrahman97/SoftChallengers/blob/master/Soft%20Website/Views/Home/Portfolio.cshtml`)
+- Home Page (`/Soft Website/Views/Home/Index.cshtml`)
+- Portfolio Page (`/Soft Website/Views/Home/Portfolio.cshtml`)
+- Contact Page (`/Soft Website/Views/Home/Contact.cshtml`)
+- About Page (`/Soft Website/Views/Home/About.cshtml`)
+- Portfolio Page (`/Soft Website/Views/Home/Portfolio.cshtml`)
 ## Languages Used
 - ### Backend
   - ASP.NET - MVC

@@ -1,4 +1,4 @@
-<a href="https://www.facebook.com/softchallengers/"><p align="center"><img src="https://raw.githubusercontent.com/abdelelrahman97/SoftChallengers/master/Soft%20Website/imgs/SoftChallengers-removebg-1.png?token=AOQBFFRGICVIBHQ32ODVMTS6QDUQO" title="SoftChallengers" alt="SoftChallengers"></p></a>
+<a href="https://www.facebook.com/softchallengers/"><p align="center"><img src="https://github.com/abdelelrahman97/SoftChallengers/blob/master/Soft%20Website/imgs/SoftChallengers-removebg-1.png?raw=true" title="SoftChallengers" alt="SoftChallengers"></p></a>
 
 <!-- [![SoftChallengers](SoftChallengers-removebg-1.png)](https://www.facebook.com/softchallengers/) -->
 
@@ -44,7 +44,7 @@
 
 | <a href="https://www.facebook.com/Hassaan202020" target="_blank">**Hassaan Nabil**</a> |<a href="https://github.com/mohosny14" target="_blank">**Mohamed Hosny**</a> | <a href="https://github.com/abdelelrahman97" target="_blank">**Abdelrahman Mahmoud**</a> |
 | :---: |:---:| :---:|
-| [![Hassaan Nabil](https://github.com/abdelelrahman97/SoftChallengers/blob/master/Soft%20Website/imgs/teame/hassaan.jpg)](https://www.facebook.com/Hassaan202020)    | [![Mohamed Hosny](https://github.com/abdelelrahman97/SoftChallengers/blob/master/Soft%20Website/imgs/teame/mHosni.jfif)](https://github.com/mohosny14) | [![Abdelrahman Mahmoud](https://raw.githubusercontent.com/abdelelrahman97/SoftChallengers/master/Soft%20Website/imgs/teame/IMG_20170919_124426.jpg?token=AOQBFFWL3OMKPMWTIERB52S6QDR3M)](https://github.com/abdelelrahman97)  |
+| [![Hassaan Nabil](https://github.com/abdelelrahman97/SoftChallengers/blob/master/Soft%20Website/imgs/teame/hassaan.jpg)](https://www.facebook.com/Hassaan202020)    | [![Mohamed Hosny](https://github.com/abdelelrahman97/SoftChallengers/blob/master/Soft%20Website/imgs/teame/mHosni.jfif)](https://github.com/mohosny14) | [![Abdelrahman Mahmoud](https://github.com/abdelelrahman97/SoftChallengers/blob/master/Soft%20Website/imgs/teame/IMG_20170919_124426.jpg)](https://github.com/abdelelrahman97)  |
 | <a href="https://www.facebook.com/Hassaan202020" target="_blank">`https://www.facebook.com/Hassaan202020`</a> | <a href="https://github.com/mohosny14" target="_blank">`https://github.com/mohosny14`</a> | <a href="https://github.com/abdelelrahman97" target="_blank">`https://github.com/abdelelrahman97`</a> |
 
 - Copyright 2020 © <a href="https://www.facebook.com/softchallengers/" target="_blank">SoftChallengers</a>.

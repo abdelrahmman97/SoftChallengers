@@ -57,6 +57,15 @@ namespace WebApplication1.Controllers
         [Route("Account/Index")]
         public ActionResult Index()
         {
+            ApplicationDbContext db = new ApplicationDbContext();
+            ViewBag.team = db.Teams.Count();
+            ViewBag.categories = db.Categories.Count();
+            ViewBag.work = db.Works.Count();
+
+            ViewBag.TeamList = db.Teams.ToList();
+            ViewBag.CategoriesList = db.Categories.ToList();
+            ViewBag.WorkList = db.Works.ToList();
+
             return View();
         }
 
@@ -91,7 +100,7 @@ namespace WebApplication1.Controllers
                 case SignInStatus.Success:
                     if (string.IsNullOrWhiteSpace(returnUrl))
                     {
-                        return RedirectToAction("Index","Account");
+                        return RedirectToAction("Index", "Account");
                     }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
@@ -521,4 +530,5 @@ namespace WebApplication1.Controllers
         }
         #endregion
     }
+
 }
